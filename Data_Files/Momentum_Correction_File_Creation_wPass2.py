@@ -65,7 +65,7 @@ file_name = str(file_location)
 
 
 pass_version = "NA"
-Beam_Energy = 10.6041 # Fall 2018 Beam Energy
+Beam_Energy = 10.6041 # Fall 2018 Beam Energy change according to the data set used
 
 if(("_MC" not in event_type) and (event_type not in ["MC"])):
     # Spring 2019 Data sets

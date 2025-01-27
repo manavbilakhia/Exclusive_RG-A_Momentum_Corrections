@@ -8,7 +8,7 @@ fi
 
 VARIABLE_PART=$1
 ACTION=${2:-run} # Default action is 'run' if not provided
-DIRECTORY="/w/hallb-scshelf2102/clas12/richcap/Exclusive_RG-A_Momentum_Corrections/Data_Files/Single_Pion_Channel_epipN/Pass2/Outbending/" # Adjust the directory path as needed
+DIRECTORY="/w/hallb-scshelf2102/clas12/manavb/grad/momcor/Exclusive_RG-A_Momentum_Corrections/Data_Files/Single_Pion_Channel_epipN/Pass2/Outbending/" # Adjust the directory path as needed
 FILE_PATTERN="Single_Pion_Channel_epipX_Outbending_With_Dp_${VARIABLE_PART}_File"
 INPUT_FILES="${FILE_PATTERN}_5*root"
 OUTPUT_FILE="${FILE_PATTERN}_All.root"

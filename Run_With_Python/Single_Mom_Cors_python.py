@@ -19,10 +19,10 @@ from Extra_Functions_for_Histo_Creation import *
 
 
 
-Selection_of_In_or_Out = "Inbending"
-# Selection_of_In_or_Out = "Outbending"
+# Selection_of_In_or_Out = "Inbending"
+Selection_of_In_or_Out = "Outbending"
 # Selection_Data_Set = "Fall2018"
-Selection_Data_Set = "Fall2018_Pass2"
+# Selection_Data_Set = "Fall2018_Pass2"
 # Selection_Data_Set = "Fall2018_Pass2_Central"
 Selection_Data_Set = "Fall2018_Pass2_Forward"
 # Selection_Data_Set = "Spring2019_Pass2"
@@ -43,10 +43,10 @@ Single_Histogram_Canvas, histo_search_count_single = {}, {}
 # Single_EvntType = "P0"
 Single_EvntType = "EO"
 Single_EvntType = "SP"
-Single_Bending_Type = "Inbending"
-# Single_Bending_Type = "Outbending"
+#Single_Bending_Type = "Inbending"
+Single_Bending_Type = "Outbending"
 # Single_Data_Run = "Fall2018"
-Single_Data_Run = "Fall2018_Pass2"
+# Single_Data_Run = "Fall2018_Pass2"
 # Single_Data_Run = "Fall2018_Pass2_Central"
 Single_Data_Run = "Fall2018_Pass2_Forward"
 # Single_Data_Run = "Spring2019_Pass1_Central"
@@ -57,13 +57,13 @@ Single_Data_Run = "Fall2018_Pass2_Forward"
 
 # Particle_Search = "pro"
 Particle_Search = "el"
-Particle_Search = "pip"
+# Particle_Search = "pip"
 
-Use_Missing_Mass_Plots = not True
+Use_Missing_Mass_Plots = True # make nmot true to run del p plots
 
 Use_Invariant_Mass_Plots = not True
 
-Make_MM_Cuts = not True
+Make_MM_Cuts =  not True # make missing mass cuts only works for mm0. make not true when not using mm0
 if((not Use_Missing_Mass_Plots) and (not Use_Invariant_Mass_Plots)):
     Make_MM_Cuts = False
 elif(Make_MM_Cuts):
@@ -92,10 +92,6 @@ def Filter_Conditions_Single(Input):
     # if("reg2" not in str(Input)):
     #     # print('"regall" not in str(Input)')
     #     Condition_list.append(True)
-
-
-#     if("mmfaP2" not in str(Input)):
-#         Condition_list.append(True)
 
 #     Condition_list.append("ELPipMMfaP2" not in str(Input))
 # #     Condition_list.append("ELPipMM0" not in str(Input))
@@ -265,11 +261,11 @@ def Filter_Conditions_Single(Input):
 #         Condition_list.append(True)
 
 
-#     if("mm0_ELPipMM0" not in str(Input)):
+#     if("mm0_ELPipMM0" not in str(Input)): # uncorrected electron momentum, uncorrected pion momentum but corrected pion energy loss 
 #         Condition_list.append(True)
 
-#     if("mm0'" not in str(Input)):
-#         Condition_list.append(True)
+    #if("mm0'" not in str(Input)):     #this if block is to make no correction for the missing mass
+    #     Condition_list.append(True)
 
 
     if(Make_MM_Cuts):
@@ -291,10 +287,10 @@ def Filter_Conditions_Single(Input):
 #             Condition_list.append(True)
 #         if("ELPipMM"     in str(Input)):
 #             Condition_list.append(True)
-        if("mmfaP2_ELPipMMfaP2" not in str(Input)):
+        if("mmfaP2_ELPipMMfaP2" not in str(Input)): # all corrections
             Condition_list.append(True)
-        if("mmfaP2"  not in str(Input)):
-            Condition_list.append(True)
+        #if("mmfaP2'"  not in str(Input)): #electron corrections only
+        #    Condition_list.append(True)
 #         if("PipMM"       in str(Input)):
 #             Condition_list.append(True)
 

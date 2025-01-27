@@ -23,17 +23,17 @@ from Extra_Functions_for_Histo_Creation import *
 
 # Data_Run_List = ["Fall2018", "Spring2019_Pass1", "Spring2019_Pass2"]
 # Data_Run_List = ["Fall2018"]
-Data_Run_List = ["Fall2018_Pass2"]
+# Data_Run_List = ["Fall2018_Pass2"]
 
 # # Data_Run_List = ["Spring2019_Pass1", "Spring2019_Pass2"]
 # # Data_Run_List = ["Spring2019_Pass1_Central", "Spring2019_Pass2_Central"]
 
 # # Data_Run_List = ["Fall2018", "Spring2019_Pass2"]
 # # Data_Run_List = ["Spring2019_Pass1"]
-Data_Run_List = ["Spring2019_Pass2"]
+# Data_Run_List = ["Spring2019_Pass2"]
 
 # # Data_Run_List = ["Fall2018_Pass2_Central"]
-# Data_Run_List = ["Fall2018_Pass2_Forward"]
+Data_Run_List = ["Fall2018_Pass2_Forward"]
 
 # Data_Run_List = ["Monte_Carlo"]
 # Data_Run_List = ["Monte_Carlo_Pass2"]
@@ -82,8 +82,8 @@ EvntType_List = ["EO", "SP"]
 ##==========##==========##  IN/OUT-BENDING CHOICES  ##==========##==========##
 ##==========================================================================##
 
-# Bending_Type_List = ["Inbending", "Outbending"]
-Bending_Type_List = ["Inbending"]
+Bending_Type_List = ["Inbending", "Outbending"]
+# Bending_Type_List = ["Inbending"]
 # Bending_Type_List = ["Outbending"]
 
 ##==========================================================================##
@@ -187,23 +187,23 @@ if("pip" not in Particle_Mom_List):
 ##==========##==========##    CORRECTION CHOICES    ##==========##==========##
 ##==========================================================================##
 
-Correction_Name_List = ["mm0", "mm0_ELPipMM0"]
-Correction_Name_List = ["mm0_ELPipMM0", "mmfaP2_ELPipMM0"]
-Correction_Name_List = ["mmfaP2_ELPipMM0"]
-Correction_Name_List = ["mmfaP2_ELPipMM0", "mmfaP2_ELPipMMfaP2"]
-Correction_Name_List = ["mmfaP2_ELPipMMfaP2"]
-Correction_Name_List = ["mm0", "mm0_ELPipMM0", "mmfaP2", "mmfaP2_ELPipMM0", "mmfaP2_ELPipMMfaP2"]
-# Correction_Name_List = ["mmfaP2_ELPipMM0"]
-# Correction_Name_List = ["mmfaP2", "mmfaP2_ELPipMMfaP2"]
-Correction_Name_List = ["mm0"]
-Correction_Name_List = ["mmfaP2"]
-# # Correction_Name_List = ["mm0", "mm0_ELPipMM0", "mmfaP2_ELPipMM0", "mmfaP2_ELPipMMfaP2"]
-# Correction_Name_List = ["mmfaP2", "mmfaP2_ELPipMM0"]
-Correction_Name_List = ["mmfaP2_ELPipMMfaP2"]
-# Correction_Name_List = ["mmfaP2", "mmfaP2_ELPipMMfaP2"]
-# Correction_Name_List = ["mmfaP2", "mmfaP2_ELPipMM0", "mmfaP2_ELPipMMfaP2"]
-
-Correction_Name_List = ["mmRP2"]
+#Correction_Name_List = ["mm0", "mm0_ELPipMM0"]
+#Correction_Name_List = ["mm0_ELPipMM0", "mmfaP2_ELPipMM0"]
+#Correction_Name_List = ["mmfaP2_ELPipMM0"]
+#Correction_Name_List = ["mmfaP2_ELPipMM0", "mmfaP2_ELPipMMfaP2"]
+#Correction_Name_List = ["mmfaP2_ELPipMMfaP2"]
+#Correction_Name_List = ["mm0", "mm0_ELPipMM0", "mmfaP2", "mmfaP2_ELPipMM0", "mmfaP2_ELPipMMfaP2"]
+## Correction_Name_List = ["mmfaP2_ELPipMM0"]
+## Correction_Name_List = ["mmfaP2", "mmfaP2_ELPipMMfaP2"]
+Correction_Name_List = ["mm0","mmfaP2" ,"mmfaP2_ELPipMMfaP2" ]
+#Correction_Name_List = ["mmfaP2_ELPipMMfaP2"]
+## # Correction_Name_List = ["mm0", "mm0_ELPipMM0", "mmfaP2_ELPipMM0", "mmfaP2_ELPipMMfaP2"]
+## Correction_Name_List = ["mmfaP2", "mmfaP2_ELPipMM0"]
+#Correction_Name_List = ["mmfaP2_ELPipMMfaP2"]
+## Correction_Name_List = ["mmfaP2", "mmfaP2_ELPipMMfaP2"]
+## Correction_Name_List = ["mmfaP2", "mmfaP2_ELPipMM0", "mmfaP2_ELPipMMfaP2"]
+#
+#Correction_Name_List = ["mmRP2"]
 
 ##==========================================================================##
 ##==========##==========##    CORRECTION CHOICES    ##==========##==========##
@@ -217,11 +217,13 @@ Correction_Name_List = ["mmRP2"]
 ##==========##==========##  REGION/BINNING CHOICES  ##==========##==========##
 ##==========================================================================##
 
-Binning_Option_List = [1, 3]
-# Binning_Option_List = [1]
+#Binning_Option_List = [1, 3] # this line is for all bins
+#Region_Option_List = ['regall', 'reg1', 'reg2', 'reg3'] # this line is for all bins
+Binning_Option_List = [1] # this line is for integrated cuts
+Region_Option_List = ['regall'] # this line is for integrated cuts
 # Binning_Option_List = [3]
-Region_Option_List = ['regall', 'reg1', 'reg2', 'reg3']
-# Region_Option_List = ['regall']
+
+
 
 # Region_Option_List = ['reg1', 'reg2', 'reg3']
 # Region_Option_List = ['reg1', 'reg2']
