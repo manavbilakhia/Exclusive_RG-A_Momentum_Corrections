@@ -1,4 +1,9 @@
 # Exclusive RG-A Momentum Corrections
+
+# Manav's Notes:
+Link to tasks and [results](https://drive.google.com/drive/folders/17IHzD7mIl2omt9QD4fyv04MJX15Ya1z4?usp=drive_link) since they are not updated to github
+
+# Richard's Notes:
 Momentum Corrections developed using exclusive pion reactions.
 
 Main Correction Code Location: Data_Files/File_Creation_Final_Momentum_Corrections_Github.py
