@@ -57,8 +57,8 @@ Data_Run_List = ["Fall2018_Pass2_Forward"]
 
 # EvntType_List = ["ES", "EO"]
 # EvntType_List = ["SP", "EO"]
-EvntType_List = ["EO", "SP"]
-# EvntType_List = ["SP"]
+# EvntType_List = ["EO", "SP"]
+EvntType_List = ["SP"]
 # EvntType_List = ["DP", "P0"]
 # EvntType_List = ["DP"]
 # EvntType_List = ["P0"]
@@ -149,6 +149,7 @@ if('el'   in str(histogram_type)):
     Particle_Sec_List = ['el']
     if(("Dp" in str(histogram_type)) and ("EO" not in EvntType_List)):
         EvntType_List = ["EO", "SP"]
+        EvntType_List = ["SP"]
 if('pip'  in str(histogram_type)):
     print(f"{color.BGREEN}\nPi+ Pion Particle option selected\n{color.END}")
     Particle_Mom_List = ['pip']
@@ -345,10 +346,10 @@ if("ES" in EvntType_List):
 
 if("el" in Particle_Mom_List):
     print(f"{color.BOLD}\nElectron Corrections available...{color.END}")
-#     List_of_Locate_name.append("Dmom_pel_Histo('Correction_Name_List', '', 'El Sector Sector_Number_List', '1', 'regall', 'Extra_Cut_Option'")
+    List_of_Locate_name.append("Dmom_pel_Histo('Correction_Name_List', '', 'El Sector Sector_Number_List', '1', 'regall', 'Extra_Cut_Option'") # turn on when doing integrated phi bins
 #     List_of_Locate_name.append("Dmom_pel_Histo('Correction_Name_List', '', 'El Sector Sector_Number_List', 'Binning_Option_List', 'Region_Option_List', 'Extra_Cut_Option'")
-    List_of_Locate_name.append("Dmom_pel_Histo('Correction_Name_List', '', 'El Sector Sector_Number_List', '1', 'regall', 'Binning_Option_List', 'Region_Option_List', 'Extra_Cut_Option'")
-    
+#    List_of_Locate_name.append("Dmom_pel_Histo('Correction_Name_List', '', 'El Sector Sector_Number_List', '1', 'regall', 'Binning_Option_List', 'Region_Option_List', 'Extra_Cut_Option'") # turn on when doing individual phi bins
+       
     
 if("pip" in Particle_Mom_List):
     print(f"{color.BOLD}\nPi+ Corrections available...{color.END}")
@@ -374,7 +375,8 @@ if('MM'   in str(histogram_type)):
 elif('Dp' in str(histogram_type)):
     print(f"\n{color.BGREEN}∆P Histogram(s) option selected{color.END}")
     if("el" in Particle_Mom_List):
-        List_of_Locate_name = ["Dmom_pel_Histo('Correction_Name_List', '', 'El Sector Sector_Number_List', '1', 'regall', 'Binning_Option_List', 'Region_Option_List', 'Extra_Cut_Option'"]
+    #    List_of_Locate_name = ["Dmom_pel_Histo('Correction_Name_List', '', 'El Sector Sector_Number_List', '1', 'regall', 'Binning_Option_List', 'Region_Option_List', 'Extra_Cut_Option'"] # use for individual phi bins
+        List_of_Locate_name = ["Dmom_pel_Histo('Correction_Name_List', '', 'El Sector Sector_Number_List', '1', 'regall', 'Extra_Cut_Option')"] # use for integrated bins
     if("pip" in Particle_Mom_List):
         List_of_Locate_name = ["Dmom_pip_Histo('Correction_Name_List', '', 'Pi+ Sector Sector_Number_List', 'Binning_Option_List', 'Region_Option_List', 'Extra_Cut_Option'"]
 

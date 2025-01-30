@@ -43,7 +43,7 @@ Single_Histogram_Canvas, histo_search_count_single = {}, {}
 # Single_EvntType = "P0"
 Single_EvntType = "EO"
 Single_EvntType = "SP"
-#Single_Bending_Type = "Inbending"
+Single_Bending_Type = "Inbending"
 Single_Bending_Type = "Outbending"
 # Single_Data_Run = "Fall2018"
 # Single_Data_Run = "Fall2018_Pass2"
@@ -59,7 +59,7 @@ Single_Data_Run = "Fall2018_Pass2_Forward"
 Particle_Search = "el"
 # Particle_Search = "pip"
 
-Use_Missing_Mass_Plots = True # make nmot true to run del p plots
+Use_Missing_Mass_Plots = not True # make nmot true to run del p plots
 
 Use_Invariant_Mass_Plots = not True
 
@@ -289,13 +289,13 @@ def Filter_Conditions_Single(Input):
 #             Condition_list.append(True)
         if("mmfaP2_ELPipMMfaP2" not in str(Input)): # all corrections
             Condition_list.append(True)
-        #if("mmfaP2'"  not in str(Input)): #electron corrections only
-        #    Condition_list.append(True)
+#        if("mmfaP2'"  not in str(Input)): #electron corrections only
+#            Condition_list.append(True)
 #         if("PipMM"       in str(Input)):
 #             Condition_list.append(True)
 
-#         if("mm0'"  not in str(Input)):
-#             Condition_list.append(True)
+#        if("mm0'"  not in str(Input)):
+#            Condition_list.append(True)
 
     return Condition_list
 
