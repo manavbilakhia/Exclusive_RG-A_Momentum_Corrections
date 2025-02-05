@@ -62,7 +62,7 @@ if('MM'   in str(histogram_type)):
         EvntType_List.remove("EO")
 elif('Dp' in str(histogram_type)):
     print(f"\n{color.BGREEN}∆P Histogram(s) option selected{color.END}")
-    #if("el" in Particle_Mom_List):
+    #if("el" in Particle_Mom_List): redundant lines
     #    List_of_Locate_name = ["Dmom_pel_Histo('Correction_Name_List', '', 'El Sector Sector_Number_List', '1', 'regall', 'Binning_Option_List', 'Region_Option_List', 'Extra_Cut_Option'"]
     if("pip" in Particle_Mom_List):
         List_of_Locate_name = ["Dmom_pip_Histo('Correction_Name_List', '', 'Pi+ Sector Sector_Number_List', 'Binning_Option_List', 'Region_Option_List', 'Extra_Cut_Option'"]
